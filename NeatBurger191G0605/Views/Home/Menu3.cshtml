@@ -1,0 +1,20 @@
+﻿@model NeatBurger191G0605.Models.ViewModels.Menu3ViewModels
+@{
+    Layout = "View";
+}
+<section class="menu3">
+
+    <div>
+        <h1>NUESTRO MENÚ</h1>
+
+      @foreach (var item in Model.menus)
+        {
+            <h2 class="seleccionado"><a href="~/Home/Menu3/@(item.Id)"><span>@item.Nombre</span> <span class="price">$@item.Precio</span></a></h2>
+
+        }        
+    </div>
+    <div>
+        <img src="~/Hamburguesas/@(Model.id).jpg" />
+        <p>@Model.Descripcion</p>
+    </div>
+</section>

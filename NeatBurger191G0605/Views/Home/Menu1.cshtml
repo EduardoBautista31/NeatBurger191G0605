@@ -1,0 +1,40 @@
+﻿@model NeatBurger191G0605.Models.Menu
+
+@{
+    Layout = "View";
+   
+}
+ 
+<body>
+   
+        <section class="menu1">
+            <img src="~/Hamburguesas/@(Model.Id).jpg" />
+            <div class="datos">
+                <h3>$@Model.Precio</h3>
+                <h2>@Model.Nombre</h2>
+                <p>@Model.Descripción</p>
+            </div>
+            <span>
+                
+                @if (Model.Id==1)
+                {
+                    <a href="~/Home/Menu1/12">&lt;</a>
+                <a href="~/Home/Menu1/@(Model.Id+1)">&gt;</a>
+                  
+                }
+                else if (Model.Id==12)
+                {
+                    <a href="~/Home/Menu1/1">&lt;</a>
+                <a href="~/Home/Menu1/@(Model.Id-1)">&lt;</a>
+
+                    
+                }
+                else
+                {
+                    <a href="~/Home/Menu1/@(Model.Id-1)">&lt;</a>
+                    <a href="~/Home/Menu1/@(Model.Id+1)">&gt;</a>
+                }
+            </span>
+        </section>
+    
+</body>

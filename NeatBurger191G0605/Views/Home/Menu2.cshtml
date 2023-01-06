@@ -1,0 +1,68 @@
+﻿@model NeatBurger191G0605.Models.ViewModels.ClasificacionViewModel
+@{
+    Layout = "View";
+}
+ 
+<body>
+
+           
+        <section class="menu2">
+        @foreach (var item in Model.clasificacion1)
+        {
+            <h1>@item.IdClasificacionNavigation.Nombre</h1>
+            break;
+        }
+        @foreach (var item in Model.clasificacion1)
+        {
+            <div>
+                <img src="~/Hamburguesas/@(item.Id).jpg">
+                <h1>@item.Nombre</h1>
+                <h2>$@item.Precio</h2>
+                <p>@item.Descripción</p>
+            </div>   
+        }
+        </section>
+    
+    
+      
+        <section class="menu2">
+        @foreach (var item in Model.clasificacion2)
+        {
+            <h1>@item.IdClasificacionNavigation.Nombre</h1>
+            break;
+        }
+        @foreach (var item in Model.clasificacion2)
+        {
+
+            <div>
+                <img src="~/Hamburguesas/@(item.Id).jpg">
+                <h1>@item.Nombre</h1>
+                <h2>$@item.Precio</h2>
+                <p>@item.Descripción</p>
+            </div>
+        } 
+        </section>
+
+    
+     
+            <section class="menu2">
+        @foreach (var item in Model.clasificacion3)
+        {
+            <h1>@item.IdClasificacionNavigation.Nombre</h1>
+            break;
+        }
+        @foreach (var item in Model.clasificacion3)
+        {
+
+            <div>
+                    <img src="~/Hamburguesas/@(item.Id).jpg">
+                    <h1>@item.Nombre</h1>
+                    <h2>$@item.Precio</h2>
+                    <p>@item.Descripción</p>
+                </div>
+        } 
+            </section>
+
+    
+
+</body>
